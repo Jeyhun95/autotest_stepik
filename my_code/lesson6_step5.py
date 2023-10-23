@@ -7,9 +7,9 @@ try:
     browser = webdriver.Chrome()
     browser.get(link)
 
-    browser.find_element(By.CSS_SELECTOR, '[placeholder="Input your first name"]').send_keys('Jaikhun')
-    browser.find_element(By.CSS_SELECTOR, '[placeholder="Input your last name"]').send_keys('Jaikhun')
-    browser.find_element(By.CSS_SELECTOR, '[placeholder="Input your email"]').send_keys('Jaikhun@mail.ru')
+    browser.find_element(By.CSS_SELECTOR, '.form-control.first').send_keys('Jaikhun')
+    browser.find_element(By.CSS_SELECTOR, '.form-group.second_class').send_keys('Jaikhun')
+    browser.find_element(By.CSS_SELECTOR, '.form-group.third_class').send_keys('Jaikhun@mail.ru')
     # Отправляем заполненную форму
     button = browser.find_element(By.CSS_SELECTOR, "button.btn")
     button.click()
